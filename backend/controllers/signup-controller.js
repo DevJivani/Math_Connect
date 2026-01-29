@@ -13,7 +13,7 @@ const signup = async (req, res, next) => {
     return next(new HttpError('Invalid inputs passed, please check your data.', 422));
   }
 
-  const { username, email, password, full_name, profile_photo } = req.body;
+  const { username, email, password, profile_photo } = req.body;
 
   // Check if the user already exists
   let existingUser;
@@ -40,7 +40,6 @@ const signup = async (req, res, next) => {
   const createdUser = new User({
     username,
     password: hashPassword,
-    full_name: full_name || null,
     email,
     profile_photo: profilePhotoValue,
   });

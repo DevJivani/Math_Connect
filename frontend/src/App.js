@@ -11,6 +11,7 @@ import ProtectedRoute from './components/ProtectedRoute';
 import MathTools from "./pages/MathTools";
 import Chats from "./components/Chats";
 import Questions from "./pages/Questions";
+import ForgetPassword from "./pages/ForgetPassword";
 
 function App() {
 
@@ -39,6 +40,7 @@ function App() {
             <Route path="/math-tools" element={<MathTools/>}/>
             <Route path="/chats" element={<Chats/>}/>
             <Route path="/questions" element={<Questions/>}/>
+            <Route path="/forget-password" element={<ForgetPassword />} />
           </Route>
 
           {/* Redirect everything else to login */}
